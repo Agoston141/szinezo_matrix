@@ -1,12 +1,13 @@
 *{margin:0; padding: 0; box-sizing: border-box;}
 main{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     background-image: linear-gradient(rgb(0, 140, 255), rgb(14, 235, 224));
 }
-.container{
+.container, .container2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -26,4 +27,21 @@ main{
 }
 .blur{
     filter:blur(5px);
+}
+.container2{
+    justify-items:center ;
+    align-content: center;
+    margin-top: 1rem;
+    width: 50vh;
+}
+.field input, .field button{
+    height: 2rem;
+    font-size: 15px;
+    width: 7vh;
+}
+.eight input{
+    width: 7rem;
+}
+.field select{
+    font-size: 1.3rem;
 }
