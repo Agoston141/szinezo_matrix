@@ -130,7 +130,6 @@ const calculate = ()=>{
         default:
             break;
     }
-    //box9.innerText = result
     box9.innerText = operandus ? result : "-";
     if(!operandus) {
         setTimeout(()=>{
