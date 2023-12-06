@@ -100,3 +100,46 @@ const input8 = document.querySelector(".container2 .eight input");
 input8.addEventListener("keydown",(event) =>{
     box8.innerText=event.key
 })
+
+//BOX 9: Mini kalkulátor:
+const calc = document.querySelector(".nine button");
+
+const calculate = ()=>{
+    const box9 = document.getElementById("9")
+    let result = Number(document.getElementById("9").innerText);
+    const operator = document.querySelector(".nine select").value;
+    const operandus = document.querySelector(".nine input").value;
+
+    switch(operator){
+        case "add" :
+            result += Number(operandus);
+            break;
+
+        case "sub" :
+            result -=Number(operandus)
+            break;
+
+        case "multiply" :
+            result*=Number(operandus);
+            break;
+
+        case "div" :
+            result /=Number(operandus)
+            break;
+
+        default:
+            break;
+    }
+    //box9.innerText = result
+    box9.innerText = operandus ? result : "-";
+    if(!operandus) {
+        setTimeout(()=>{
+            box9.innerText = "9"
+            result = 9
+        },1000);
+    }
+}
+
+
+
+calc.addEventListener("click", calculate);
